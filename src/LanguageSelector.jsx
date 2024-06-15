@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { List, Typography, Input } from 'antd';
-import { videoData } from './data';
-import './LanguageSelector.css';
+import React, { useState } from "react";
+import { List, Typography, Input } from "antd";
+import { videoData } from "./data";
+import "./LanguageSelector.css";
 
 const { Title } = Typography;
 const { Search } = Input;
 
 function LanguageSelector({ onLanguageChange, selectedLanguage }) {
-  const [filter, setFilter] = useState('');
+  const [filter, setFilter] = useState("");
 
   const handleSearch = (e) => {
     setFilter(e.target.value.toLowerCase());
@@ -19,7 +19,10 @@ function LanguageSelector({ onLanguageChange, selectedLanguage }) {
 
   return (
     <div className="language-selector">
-      <Title level={5} className="language-title">Choose Video Language</Title>
+      <div class="paragraph-container">
+        <p>Choose the language</p>
+        <p className="right-text">إختر اللغة</p>
+      </div>
       <Search
         placeholder="Search languages"
         onChange={handleSearch}
@@ -31,10 +34,16 @@ function LanguageSelector({ onLanguageChange, selectedLanguage }) {
         renderItem={(lang) => (
           <List.Item>
             <button
-              className={`language-button ${selectedLanguage === lang ? 'active' : ''}`}
+              className={`language-button ${
+                selectedLanguage === lang ? "active" : ""
+              }`}
               onClick={() => onLanguageChange(lang)}
             >
-              <img src={videoData[lang].flag} alt={`${lang} flag`} className="flag-icon" />
+              <img
+                src={videoData[lang].flag}
+                alt={`${lang} flag`}
+                className="flag-icon"
+              />
               <span>{videoData[lang].title}</span>
             </button>
           </List.Item>
