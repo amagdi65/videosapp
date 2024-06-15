@@ -183,8 +183,8 @@
 }
 
 iframe {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
 }
 .scrollable-container {
   max-height: 300px; /* Adjust the height as needed */
@@ -255,4 +255,19 @@ iframe {
 
 .title-card {
   background-color: white;
+}
+
+.language-search-bar-mobile {
+  display: none;
+}
+
+.language-selector-desktop {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .language-search-bar-mobile {
+    display: block;
+  }
+
 }

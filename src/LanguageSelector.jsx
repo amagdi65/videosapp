@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { List, Typography, Input } from "antd";
+import { List, Input } from "antd";
 import { videoData } from "./data";
 import "./LanguageSelector.css";
 
-const { Title } = Typography;
 const { Search } = Input;
 
 function LanguageSelector({ onLanguageChange, selectedLanguage }) {
