@@ -1,9 +1,8 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { Layout, Typography, Row, Col, Card, Spin } from 'antd';
+import React, { useState, useEffect, useRef, Suspense, lazy } from 'react';
+import { Layout, Typography, Row, Col, Card, Spin, Alert } from 'antd';
 import axios from 'axios';
 import { videoData } from './data';
 import './App.css';
-import { UserOutlined, GlobalOutlined } from '@ant-design/icons';
 
 const YouTube = lazy(() => import('react-youtube'));
 const ScriptDisplay = lazy(() => import('./ScriptDisplay'));
@@ -14,28 +13,53 @@ const { Title } = Typography;
 
 function App() {
   const [language, setLanguage] = useState('ar');
-  const [totalUsers, setTotalUsers] = useState(0);
-  const [languageUsers, setLanguageUsers] = useState({});
+  const audioRef = useRef(null);
+  const playerRef = useRef(null);
 
   useEffect(() => {
     axios.post('http://localhost/videosapp/index.php/visit', { language });
-    axios.get('http://localhost/videosapp/index.php/total-users')
-      .then(response => setTotalUsers(response.data.totalUsers));
+  }, [language]);
 
-    axios.get('http://localhost/videosapp/index.php/language-users')
-      .then(response => setLanguageUsers(response.data));
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  }, [language]);
+
+  useEffect(() => {
+    if (playerRef.current) {
+      if (language !== 'ar') {
+        playerRef.current.setVolume(10);
+      } else {
+        playerRef.current.setVolume(100);
+      }
+    }
   }, [language]);
 
   const handleLanguageChange = (value) => {
     setLanguage(value);
   };
 
+  const onPlayerReady = (event) => {
+    playerRef.current = event.target;
+    if (language !== 'ar') {
+      event.target.setVolume(10);
+    } else {
+      event.target.setVolume(100);
+    }
+  };
+
+  const videoOptions = {
+    playerVars: {
+      autoplay: 1,
+    },
+  };
+
   return (
     <Layout className="layout">
       <Header className="header">
-        <a href='https://manaratalharamain.gov.sa/' style={{cursor: "pointer"}}>
-        <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" className="logo" />
-
+        <a href='https://manaratalharamain.gov.sa/' style={{ cursor: "pointer" }}>
+          <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Logo" className="logo" />
         </a>
       </Header>
       <Content className="content">
@@ -45,18 +69,31 @@ function App() {
               <Title level={4} className="video-title">{videoData[language].videoTitle}</Title>
               <div className="video-container">
                 <Suspense fallback={<Spin />}>
-                  <YouTube videoId={videoData[language].videoId} className="youtube-video" />
+                  <YouTube 
+                    videoId={videoData[language].videoId} 
+                    opts={videoOptions} 
+                    onReady={onPlayerReady} 
+                    className="youtube-video" 
+                  />
                 </Suspense>
               </div>
               <Suspense fallback={<Spin />}>
-                <audio controls className="audio-player">
+                <audio ref={audioRef} controls className="audio-player" autoPlay>
                   <source src={videoData[language].audio} type="audio/mp3" />
                   Your browser does not support the audio element.
                 </audio>
               </Suspense>
-              <Suspense fallback={<Spin />}>
-                <ScriptDisplay script={videoData[language].script} />
-              </Suspense>
+              <div className="scrollable-container">
+                <Suspense fallback={<Spin />}>
+                  <ScriptDisplay script={videoData[language].script} />
+                </Suspense>
+              </div>
+              <Alert
+                message={videoData[language].syncMessage}
+                type="info"
+                showIcon
+                style={{ marginTop: 16 }}
+              />
             </Card>
           </Col>
           <Col xs={24} md={8}>
