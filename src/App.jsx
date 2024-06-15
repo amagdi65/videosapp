@@ -25,8 +25,11 @@ const isNoonOrLaterInSaudi = () => {
   const now = new Date();
   const saudiOffset = 3 * 60; // Saudi Arabia is UTC+3
   const saudiTime = new Date(now.getTime() + (now.getTimezoneOffset() + saudiOffset) * 60000);
-  console.log(saudiTime.getMinutes())
-  return saudiTime.getHours() >= 12  && saudiTime.getMinutes() >= 20;
+
+  const targetDate = new Date('2024-06-15T06:15:00Z');
+  const saudiTargetDate = new Date(targetDate.getTime() + (saudiOffset * 60000));
+  console.log(saudiTime,saudiTargetDate);
+  return saudiTime >= saudiTargetDate;
 };
 
 function App() {
@@ -41,7 +44,7 @@ function App() {
       })
       .catch((error) => console.error("Error loading language data", error));
 
-    axios.post('https://www.wmn.gov.sa/videosapp/index.php/visit', { language });
+    axios.post('https://www.wmn.gov.sa/videosback/index.php/visit', { language });
   }, [language]);
 
   useEffect(() => {
