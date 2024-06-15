@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Haram";
+  src: url("../public/DroidKufi-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Haram";
+}
+
 /* General layout and header styling */
 .layout {
   min-height: 100vh;
@@ -6,20 +17,23 @@
 
 .header {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  height: 224px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  height: 86px;
 }
 
-.logo {
-  height: 200px;
+.header img {
+  max-height: 78px;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  margin-top: 4px;
 }
 
 .content {
-  padding: 2rem;
+  padding: 1rem 0;
 }
 
 /* Counters styling */
@@ -62,8 +76,6 @@
 /* Video card styling */
 .video-card {
   width: 100%;
-  margin-bottom: 2rem;
-  padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #f5f5f5;
@@ -71,8 +83,8 @@
 
 .video-title {
   text-align: center;
-  margin-bottom: 1rem;
   font-weight: bold;
+  font-family: "Haram";
 }
 
 .video-container {
@@ -82,6 +94,8 @@
   overflow: hidden;
   max-width: 100%;
   background: #000;
+  border-radius: 5px;
+  margin: 1rem 0;
 }
 
 .youtube-video {
@@ -104,7 +118,6 @@
   padding: 1rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #f5f5f5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
 }
@@ -120,7 +133,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 /* Language selector styling */
@@ -179,4 +192,67 @@ iframe {
   padding: 16px;
   border: 1px solid #ddd;
   background-color: #f9f9f9;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: darkgray;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: gray #f1f1f1;
+}
+
+* {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+*::-ms-scrollbar {
+  display: none;
+}
+
+.footer {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+}
+
+.paragraph-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.paragraph-container p {
+  width: 100%;
+  font-size: 18px;
+}
+
+.right-text {
+  text-align: right;
+  width: 50% !important;
+}
+
+.title-card {
+  background-color: white;
 }
