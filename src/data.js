@@ -158,7 +158,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   ja: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Japanese ",
     videoTitle: "アラファ説教",
     script: "",
@@ -171,7 +171,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   ko: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Korean ",
     videoTitle: "아라파 설교",
     script: "",
@@ -184,7 +184,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   ar: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Arabic ",
     videoTitle: "خطبة عرفة",
     script: "خطبة عرفة",
@@ -196,7 +196,7 @@ export const videoData = {
     },
   },
   hi: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Hindi ",
     videoTitle: "अराफात का प्रवचन",
     script: "",
@@ -222,7 +222,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   nl: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Dutch ",
     videoTitle: "Arafat Preek",
     script: "",
@@ -235,7 +235,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   sv: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Swedish ",
     videoTitle: "Arafat Predikan",
     script: "",
@@ -248,7 +248,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   th: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Thai ",
     videoTitle: "คำเทศนาอาราฟะ",
     script: "",
@@ -327,7 +327,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   pa: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Punjabi ",
     videoTitle: "ਅਰਫਾਤ ਦਾ ਉਪਦੇਸ਼",
     script: "",
@@ -366,7 +366,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   uz: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Uzbek ",
     videoTitle: "Arofat vaʼzi",
     script: "",
@@ -379,7 +379,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   mn: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Mandinka ",
     videoTitle: "Arafah Sermon",
     script: "",
@@ -392,7 +392,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   ne: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Nepali ",
     videoTitle: "अराफात प्रवचन",
     script: "",
@@ -431,7 +431,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   ak: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Akan ",
     videoTitle: "Arafah Sermon",
     script: "",
@@ -444,7 +444,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   bh: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Bhojpuri ",
     videoTitle: "Arafah Sermon",
     script: "",
@@ -457,7 +457,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   ps: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Pashto ",
     videoTitle: "Arafah Sermon",
     script: "",
@@ -470,7 +470,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   af_fa: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Afghan Persian ",
     videoTitle: "خطبه عرفات",
     script: "",
@@ -483,7 +483,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   ff: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Fula ",
     videoTitle: "Sermon d'Arafat",
     script: "",
@@ -496,7 +496,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   so: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Somali ",
     videoTitle: "Khudbadii Carafo",
     script: "",
@@ -509,7 +509,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   sd: {
-    videoId: "moQtMet7F7w",
+    videoId: "euKAfb0dTPk",
     title: "Sindhi ",
     videoTitle: "عرفات جو خطبو",
     script: "",
