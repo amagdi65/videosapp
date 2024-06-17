@@ -48,11 +48,12 @@ function App() {
 
   useEffect(() => {
     if (playerRef.current) {
-      if (language !== 'ar') {
+      if (videoData[language] && videoData[language].audio) {
         playerRef.current.setVolume(10);
       } else {
         playerRef.current.setVolume(100);
       }
+      playerRef.current.seekTo(0); // Restart video from beginning when language changes
     }
   }, [language]);
 
@@ -62,7 +63,6 @@ function App() {
 
   const onPlayerReady = (event) => {
     playerRef.current = event.target;
-    console.log(videoData[language].audio)
     if (videoData[language].audio) {
       event.target.setVolume(10);
     } else {
