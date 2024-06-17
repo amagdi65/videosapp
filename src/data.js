@@ -93,7 +93,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   it: {
-    videoId: "mxZgR8jrfQI",
+    videoId: "3ihQdQ2vzxc",
     title: "Italian ",
     videoTitle: "Sermone di Arafat",
     script: "",
@@ -209,7 +209,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   tr: {
-    videoId: "hH8RQtGw04I",
+    videoId: "JUEkWPNxOow",
     title: "Turkish ",
     videoTitle: "Arafat Vaazı",
     script: "",
@@ -275,7 +275,7 @@ export const videoData = {
     syncMessage: "The video is not synced with the translation voice.",
   },
   ml: {
-    videoId: "4OZws7FyJB4",
+    videoId: "CFEHyX__yG0",
     title: "Malayalam ",
     videoTitle: "അറഫത്ത് പ്രഭാഷണം",
     script: "",
