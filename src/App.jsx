@@ -26,9 +26,8 @@ const isNoonOrLaterInSaudi = () => {
   const saudiOffset = 3 * 60; // Saudi Arabia is UTC+3
   const saudiTime = new Date(now.getTime() + (now.getTimezoneOffset() + saudiOffset) * 60000);
 
-  const targetDate = new Date('2024-06-15T06:15:00Z');
+  const targetDate = new Date('2024-06-15T09:00:00Z');
   const saudiTargetDate = new Date(targetDate.getTime() + (saudiOffset * 60000));
-  console.log(saudiTime,saudiTargetDate);
   return saudiTime >= saudiTargetDate;
 };
 
@@ -63,7 +62,8 @@ function App() {
 
   const onPlayerReady = (event) => {
     playerRef.current = event.target;
-    if (language !== 'ar') {
+    console.log(videoData[language].audio)
+    if (videoData[language].audio) {
       event.target.setVolume(10);
     } else {
       event.target.setVolume(100);
@@ -142,7 +142,7 @@ function App() {
                 <Suspense fallback={<Spin />}>
                   <ReactPlayer 
                     url={videoData[language].audio} 
-                    playing={false} // Prevent auto-playing until 12 PM
+                    playing={true} // Ensure auto-playing
                     controls 
                     className="audio-player" 
                     width="100%"

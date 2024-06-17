@@ -12,7 +12,7 @@ const audioUrls = {
   af_fa:
     "https://soundcloud.com/d-it-m/1445a-4?si=d30ee6df65b345f99ee017ea2ac959ca&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   hi: "https://soundcloud.com/d-it-m/1445a-5?si=d30ee6df65b345f99ee017ea2ac959ca&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
-  // pa: "https://soundcloud.com/d-it-m/1445a-6?si=6fe954af6ee546a28b3e4daba7e5c195&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
+  pa: "https://soundcloud.com/d-it-m/1445a-6?si=6fe954af6ee546a28b3e4daba7e5c195&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   sd: "https://soundcloud.com/d-it-m/1445a-7?si=7f39aebacb71415b922bdb4da4b6dfab&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   // fa: "https://soundcloud.com/d-it-m/1445a-8?si=2f3effb5f5a34961a975bd0c8edcd85f&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
   // bs: "https://soundcloud.com/d-it-m/1445a-9?si=577697a0d6dc4e26bb30cf646f7470f6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing",
